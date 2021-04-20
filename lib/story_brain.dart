@@ -52,34 +52,35 @@ class StoryBrain {
   }
 
   void nextStory(int choiceNumber) {
-    // Story = 0
-    if (_storyNumber == 0 && choiceNumber == 1) {
-      _storyNumber = 2;
-    }
-
-    if (_storyNumber == 0 && choiceNumber == 2) {
-      _storyNumber = 1;
-    }
-
-    // Story = 1
-    if (_storyNumber == 1 && choiceNumber == 1) {
-      _storyNumber = 2;
-    }
-
-    if (_storyNumber == 1 && choiceNumber == 2) {
-      _storyNumber = 3;
-    }
-
-    // Story = 2
-    if (_storyNumber == 2 && choiceNumber == 1) {
-      _storyNumber = 5;
-    }
-    if (_storyNumber == 2 && choiceNumber == 2) {
-      _storyNumber = 4;
-    }
-
     if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
       _restart();
+    } else {
+      // Story = 2
+      if (_storyNumber == 2 && choiceNumber == 1) {
+        _storyNumber = 5;
+      }
+      if (_storyNumber == 2 && choiceNumber == 2) {
+        _storyNumber = 4;
+      }
+
+      // Story = 1
+      if (_storyNumber == 1 && choiceNumber == 1) {
+        _storyNumber = 2;
+      }
+
+      if (_storyNumber == 1 && choiceNumber == 2) {
+        _storyNumber = 3;
+      }
+
+      // Story = 0
+      if (_storyNumber == 0 && choiceNumber == 1) {
+        _storyNumber = 2;
+        print(_storyNumber);
+      }
+
+      if (_storyNumber == 0 && choiceNumber == 2) {
+        _storyNumber = 1;
+      }
     }
   }
 
@@ -87,5 +88,3 @@ class StoryBrain {
     return (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2);
   }
 }
-
-//TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
