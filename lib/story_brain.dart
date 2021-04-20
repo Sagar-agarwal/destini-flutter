@@ -33,7 +33,6 @@ class StoryBrain {
         choice2: '')
   ];
 
-//TODO: Step 8 - Create a method called getStory() that returns the first storyTitle from _storyData.
   String getStory() {
     return _storyData.first.storyTitle;
   }
