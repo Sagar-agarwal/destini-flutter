@@ -37,12 +37,10 @@ class StoryBrain {
     return _storyData.first.storyTitle;
   }
 
-//TODO: Step 11 - Create a method called getChoice1() that returns the text for the first choice1 from _storyData.
   String getChoice1() {
     return _storyData.first.choice1;
   }
 
-//TODO: Step 12 - Create a method called getChoice2() that returns the text for the first choice2 from _storyData.
   String getChoice2() {
     return _storyData.first.choice2;
   }
