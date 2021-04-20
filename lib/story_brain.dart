@@ -47,10 +47,42 @@ class StoryBrain {
     return _storyData.first.choice2;
   }
 
-  void nextStory(int choiceNumber) {}
-}
+  void _restart() {
+    _storyNumber = 0;
+  }
 
-//TODO: Step 20 - Download the story plan here: https://drive.google.com/uc?export=download&id=1KU6EghkO9Hf2hRM0756xFHgNaZyGCou3
+  void nextStory(int choiceNumber) {
+    // Story = 0
+    if (_storyNumber == 0 && choiceNumber == 1) {
+      _storyNumber = 2;
+    }
+
+    if (_storyNumber == 0 && choiceNumber == 2) {
+      _storyNumber = 1;
+    }
+
+    // Story = 1
+    if (_storyNumber == 1 && choiceNumber == 1) {
+      _storyNumber = 2;
+    }
+
+    if (_storyNumber == 1 && choiceNumber == 2) {
+      _storyNumber = 3;
+    }
+
+    // Story = 2
+    if (_storyNumber == 2 && choiceNumber == 1) {
+      _storyNumber = 5;
+    }
+    if (_storyNumber == 2 && choiceNumber == 2) {
+      _storyNumber = 4;
+    }
+
+    if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
+      _restart();
+    }
+  }
+}
 
 //TODO: Step 21 - Using the story plan, update nextStory() to change the storyNumber depending on the choice made by the user. e.g. if choiceNumber was equal to 1 and the storyNumber is 0, the storyNumber should become 2.
 
