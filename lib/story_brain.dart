@@ -1,7 +1,6 @@
 import "story.dart";
 
 class StoryBrain {
-//TODO: Step 16 - Create a property called storyNumber which starts with a value of 0. This will be used to track which story the user is currently viewing.
   int _storyNumber = 0;
 
   List<Story> _storyData = [
@@ -47,9 +46,10 @@ class StoryBrain {
   String getChoice2() {
     return _storyData.first.choice2;
   }
-}
 
 //TODO: Step 17 - Create a method called nextStory(), it should not have any outputs but it should have 1 input called choiceNumber which will be the choice number (int) made by the user.
+  void nextStory(int choiceNumber) {}
+}
 
 //TODO: Step 20 - Download the story plan here: https://drive.google.com/uc?export=download&id=1KU6EghkO9Hf2hRM0756xFHgNaZyGCou3
 
